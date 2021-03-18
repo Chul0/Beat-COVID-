@@ -17,6 +17,17 @@ Simple game: user kills coronavirus by clicking viruses.
 
 
 ## Wireframes
+1. Game start page
+
+
+2. Game play page
+
+
+3. Virus dies when clicked with sanitizer(mouse cursor)
+
+
+4. Game ends
+
 
 ## User stories
 1. When user loads the page, user sees a game screen with a start button and an instruction.
