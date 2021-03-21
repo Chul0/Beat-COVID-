@@ -1,7 +1,8 @@
 console.log('JS is linked!')
 /*1.Plan out first. break them all into little pieces
 2.Focus on making MVP
-3.stretch goals adding cool features */
+3.stretch goals adding cool features 
+COMMIT and COMMIT! everytime you make big changes!!!!!!! */
 
 const START_TIMER = 30; //second
 const NUM_HOLES = 30; /* Generally use upper case for constants that are “hard-coded”. Or, in other words, when the value is known prior to execution and directly written into the code.*/
@@ -21,7 +22,7 @@ document.querySelector('.score-number').innerText=score;
 
 
 
-document.querySelector('.start-button').addEventListener('click', () => {
+document.querySelector('.start-button').addEventListener('click', (event) => {
     document.querySelector('.game-board').classList.add('hidden');
     document.querySelector('.game-board2').classList.remove('hidden');
    //  console.log('you cliked');
@@ -32,31 +33,23 @@ document.querySelector('.start-button').addEventListener('click', () => {
                 const randomHole = Math.floor(Math.random() * allHoles.length);
                 allHoles[randomHole].classList.add('virus');
                 setTimeout(() => {
-                    allHoles[randomHole].classList.remove('virus'); //use indentation to make the code more redable and understandable! it shows all the hierarchy.
+                    allHoles[randomHole].classList.remove('virus');
                 }, 10000)
             }, 1000);
             num--;
         }
     } 
-    // const removeVirus = () => {
-    //     setInterval(()=> {
-    //         const allHoles = document.querySelectorAll('.hole');
-           
-    //     })
-    // }
-    addVirus(3)
+    addVirus(3) //always invoke function!!
+
+    let interval = setInterval(()=> {
+        document.querySelector('.time-number').innerText=timeRemaining;
+        timeRemaining--;
+            if (timeRemaining === 0){
+                clearInterval(interval);
+             document.querySelector('.time-number').innerText='0';
+            }
+    }, 1000);
 })    
-
-
-
-
-   
-
-
-
-
-//Random numbers of virus (1 - 3) will show up, so I set infinite while loop
-// invoked setInterval with 3 and num-- 
 
 //for/of - loops through the values of an iterable object
 for (hole of document.querySelectorAll('.hole')) {
@@ -69,7 +62,26 @@ for (hole of document.querySelectorAll('.hole')) {
     })
 }
 
+    // const removeVirus = () => {
+    //     setTimeout(() => {
+    //             const allHolesR = document.querySelectorAll('.hole');
+    //             const randomHoleR = Math.floor(Math.random() * allHoles.length);
+    //             allHolesR[randomHoleR].classList.remove('virus');
+    //         }, 10000)
+    // }
 
- //always invoke function!!
+    // const removeVirus = () => {
+    //     setInterval(()=> {
+    //         const allHoles = document.querySelectorAll('.hole');
+           
+    //     })
+    // }
+//Random numbers of virus (1 - 3) will show up, so I set infinite while loop
+// invoked setInterval with 3 and num-- 
 
 
+
+
+
+
+// document.querySelector('.time-number').innerText=timeRemaining
