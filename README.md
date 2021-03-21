@@ -2,7 +2,6 @@
 GA Solo Project 1
 <!-- ⇧⌘V -->
 
-# Beat COVID
 
 ## What is Beat COVID Game?
 Simple game: user kills coronavirus by clicking viruses.
@@ -18,15 +17,23 @@ Simple game: user kills coronavirus by clicking viruses.
 
 ## Wireframes
 1. Game start page
+ 
+![Wireframe1](https://user-images.githubusercontent.com/79673327/111707583-b446d400-881a-11eb-88be-e10df8eb3164.jpg)
 
 
 2. Game play page
 
+![Wireframe2](https://user-images.githubusercontent.com/79673327/111707614-c4f74a00-881a-11eb-89aa-f8f14d4e2095.jpg)
+
 
 3. Virus dies when clicked with sanitizer(mouse cursor)
+ 
+![Wireframe3](https://user-images.githubusercontent.com/79673327/111707671-e0625500-881a-11eb-986a-3dbf92be2aec.jpg)
 
 
 4. Game ends
+
+![Wireframe4](https://user-images.githubusercontent.com/79673327/111707638-d0e30c00-881a-11eb-8e55-0afd0a561d0d.jpg)
 
 
 ## User stories
