@@ -26,18 +26,27 @@ document.querySelector('.start-button').addEventListener('click', () => {
     document.querySelector('.game-board2').classList.remove('hidden');
    //  console.log('you cliked');
    const addVirus = (num) => {
-    while(num > 0) {
-        setInterval(() => {
-            const allHoles = document.querySelectorAll('.hole');
-            const randomHole = Math.floor(Math.random() * allHoles.length);
-            allHoles[randomHole].classList.add('virus');
-        }, 1500);
-        num--;
-    }
-    
-}
-addVirus(3)
+        while(num > 0) {
+            setInterval(() => {
+                const allHoles = document.querySelectorAll('.hole');
+                const randomHole = Math.floor(Math.random() * allHoles.length);
+                allHoles[randomHole].classList.add('virus');
+                setTimeout(() => {
+                    allHoles[randomHole].classList.remove('virus'); //use indentation to make the code more redable and understandable! it shows all the hierarchy.
+                }, 10000)
+            }, 1000);
+            num--;
+        }
+    } 
+    // const removeVirus = () => {
+    //     setInterval(()=> {
+    //         const allHoles = document.querySelectorAll('.hole');
+           
+    //     })
+    // }
+    addVirus(3)
 })    
+
 
 
 
