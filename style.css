@@ -1,3 +1,96 @@
+/* * {
+    border: 1px solid black;
+} */
+
 body {
     background-color: cornflowerblue;
 }
+
+h1 {
+    text-align: center;
+}
+
+.game-board {
+    border: 5px solid black;
+    width: 700px;
+    height: 500px;
+    margin:auto;
+    display: flex;
+}
+
+.start-button {
+    width: 30%;
+    height: 20%;
+    text-align: center;
+    font-size: 50px;
+    margin: auto;
+    cursor:pointer;
+}
+
+.game-board2 {
+    border: 5px solid black;
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: initial;
+    align-items: flex-end;
+    cursor:url('./Wireframe/hand-sanitizer.png'), auto;
+}
+
+.hole {
+    /* border: 1px solid red; */
+    width:  50px;
+    height: 50px;
+    margin: 0 auto 0 auto;
+}
+
+.virus {
+    background-image: url("./Wireframe/COVID-Virus\ .png");
+    background-position: center;
+    background-size: 60px ;
+    animation-name: fall;
+    animation-duration: 10s;
+}
+
+@keyframes fall{
+    from {
+        opacity: 1;
+        transform: translateY(-440px);
+}
+
+    to {
+        opacity: 1;
+        transform : translateY(0px);
+    }
+}
+
+.time-container {
+    display:flex;
+    justify-content: center;
+}
+
+.time-remaining {
+    border: 3px solid black;
+    width: 10%;
+    height: 50px;
+    text-align: center;
+    margin: 10px 400px 10px 160px;
+}
+
+.score {
+    border: 3px solid black;
+    width: 10%;
+    height: 50px;
+    text-align: center;
+    margin: 10px 200px 10px 0;
+}
+
+.hidden {
+    display:none;
+}
+
+.restart-hidden {
+    display:none;
+}
+
