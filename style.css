@@ -46,8 +46,8 @@ image has to be small enough! I used 32px here*/
     height: 500px;
     margin: auto;
     display: flex;
-    flex-direction: row;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
     cursor:url('./Wireframe/hand-sanitizer.png'), auto;
 }
 
@@ -74,6 +74,13 @@ image has to be small enough! I used 32px here*/
 }
 .virus2 {
     background-image: url("./Wireframe/redvirus.png");
+    background-position: center;
+    background-size: 80px ;
+    animation-name: fall;
+    animation-duration: 10s;
+}
+.virus3 {
+    background-image: url("./Wireframe/rainbow.png");
     background-position: center;
     background-size: 80px ;
     animation-name: fall;
@@ -116,13 +123,20 @@ image has to be small enough! I used 32px here*/
     display:none;
 }
 
+.winning-message{
+    font-size: xx-large ;
+  margin-inline: auto;
+  text-align: center;
+  align-items: center;
+}
+
 .restart-button {
     width: 40%;
     height: 30%;
     text-align: center;
     align-items: center;
     font-size: 50px;
-    margin: auto;
+    margin-inline: auto;
     cursor:pointer;
 }
 
