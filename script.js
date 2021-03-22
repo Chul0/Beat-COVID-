@@ -29,7 +29,7 @@ class Virus {
 }
 let greenVirus = new Virus('virus', 2)
 let redVirus = new Virus('virus2', 5)
-let blackVirus = new Virus('virus3', -3)
+let rainbowVirus = new Virus('virus3', -4)
 
 document.querySelector('.time-number').innerText=timeRemaining;
 document.querySelector('.score-number').innerText=score;
@@ -65,7 +65,7 @@ document.querySelector('.start-button').addEventListener('click', (event) => {
                 }, 10000)
             }, 7000);
             num--;
-        }}if (type === blackVirus) {
+        }}if (type === rainbowVirus) {
             console.log('hihihihihi')
             while(num > 0 ){
             setInterval(() => {
@@ -81,7 +81,7 @@ document.querySelector('.start-button').addEventListener('click', (event) => {
     } 
     addVirus(3, greenVirus) //always invoke function!!
     addVirus(1, redVirus)
-    addVirus(1, blackVirus)
+    addVirus(1, rainbowVirus)
 
     let interval = setInterval(()=> {
         document.querySelector('.time-number').innerText=timeRemaining;
@@ -135,4 +135,6 @@ document.querySelector('.restart-button').addEventListener('click', () => {
 })
 
     
+
+
 

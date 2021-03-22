@@ -1,0 +1,46 @@
+TO-DO(MVP list) 
+
+1. HTML, CSS 
+  - Header, instruction, game board, start button, winning status, reset button
+  -Game page, timer, score, cursor
+  
+2.JS
+ -Start button eventListener, add hidden and remove
+ -DOM manipulation - class(virus) - loop, math, random numbers of viruses show up
+ -Timer runs
+ -Score 0 
+ -event listener click -> virus disappears
+ -Score ++
+ -Timer 30s - game over
+ -winning status, reset button
+
+[Priority]
+1.Make viruses first 
+2.make them pop up on the screen-> random place (just like whack-a-mole)
+
+
+
+****Must implement Classes!
+make virus an object 
+and give it a property point = 1 
+
+
+
+[Stretch goal]
+
+-add instruction rainbow -4, green +2, red +5 reach 100+// your mission is to save the world.
+-make it look cool
+-change the style
+-add people with masks on the bottom (Save people from the virus!!)
+-add music
+-add sound effect to every button 
+-add effect  spray when viruses are clicked 
+-add sound effect when viruses are clicked 
+
+
+
+virus icon 
+https://pngtree.com/user/my-downloads
+
+background img
+https://www.pngfind.com/mpng/Jihxxw_n64-953-kb-transparent-crt-screen-overlay-hd/
