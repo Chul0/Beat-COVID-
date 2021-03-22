@@ -33,28 +33,53 @@ h1 {
     height: 500px;
     margin: auto;
     display: flex;
-    flex-wrap: initial;
+    flex-direction: row;
     align-items: flex-end;
     cursor:url('./Wireframe/hand-sanitizer.png'), auto;
 }
 /* [reference] https://stackoverflow.com/questions/6623769/css-custom-cursor-doesnt-work-in-ff-chrome 
 image has to be small enough! I used 32px here*/
 
+.game-board3 {
+    border: 5px solid black;
+    width: 700px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    cursor:url('./Wireframe/hand-sanitizer.png'), auto;
+}
+
 
 .hole {
     /* border: 1px solid red; */
-    width:  50px;
-    height: 50px;
+    width:  80px;
+    height: 80px;
     margin: 0 auto 0 auto;
 }
+/* .hole2 {
+    border: 1px solid red;
+    width:  80px;
+    height: 80px;
+    margin: 0 auto 0 auto;
+} */
 
 .virus {
-    background-image: url("./Wireframe/COVID-Virus\ .png");
+    background-image: url("./Wireframe/greenvirus.png");
     background-position: center;
-    background-size: 60px ;
+    background-size: 80px ;
     animation-name: fall;
     animation-duration: 10s;
 }
+.virus2 {
+    background-image: url("./Wireframe/redvirus.png");
+    background-position: center;
+    background-size: 80px ;
+    animation-name: fall;
+    animation-duration: 10s;
+}
+
 @keyframes fall{
     from {
         opacity: 1;
@@ -91,7 +116,13 @@ image has to be small enough! I used 32px here*/
     display:none;
 }
 
-.restart-hidden {
-    display:none;
+.restart-button {
+    width: 40%;
+    height: 30%;
+    text-align: center;
+    align-items: center;
+    font-size: 50px;
+    margin: auto;
+    cursor:pointer;
 }
 
