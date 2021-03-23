@@ -43,6 +43,7 @@ document.querySelector('.score-number').innerText=score;
 document.querySelector('.winning-message').innerText=winningMessage
 
 
+
 document.querySelector('.start-button').addEventListener('click', (event) => {
     document.querySelector('.game-board').classList.add('hidden');
     document.querySelector('.game-board2').classList.remove('hidden');
@@ -104,6 +105,7 @@ document.querySelector('.start-button').addEventListener('click', (event) => {
             document.querySelector('.game-board2').classList.add('hidden')
             document.querySelector('.game-board3').classList.remove('hidden')
             resultValidation() //invoke this here because it should be showing after timeout runs!!!
+            backgroundMusic.pause();
         }, 30000)
         
 })    
@@ -148,7 +150,9 @@ for (hole of document.querySelectorAll('.hole')) {
 document.querySelector('.restart-button').addEventListener('click', () => {
     location.reload();
 })
-
+document.querySelector('.go-back').addEventListener('click', () => {
+    location.reload();
+})
     
 
 
@@ -181,5 +185,14 @@ buttonHover.forEach(button => {
 
 const musicButton = document.querySelector('.musicOn').addEventListener('click', () => {
     backgroundMusic.pause();
+})
+
+//Game instruction 
+document.querySelector('.instruction').addEventListener('click', ()=> {
+    document.querySelector('.instruction-board').classList.remove('hidden');
+    document.querySelector('.game-board').classList.add('hidden');
+    document.querySelector('.game-board2').classList.add('hidden');
+    document.querySelector('.game-board3').classList.add('hidden');
+    console.log('instruction')
 })
 

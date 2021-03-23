@@ -65,6 +65,19 @@ image has to be small enough! I used 32px here*/
     cursor:url('./Wireframe/hand-sanitizer.png'), auto;
 }
 
+.instruction-board {
+    /* border: 5px solid black; */
+    width: 700px;
+    height: 500px;
+    margin:auto auto 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("./Wireframe/people.png");
+    background-repeat: no-repeat;
+    background-size: 700px 500px;
+    cursor:url('./Wireframe/hand-sanitizer.png'), auto;
+}
 
 .hole {
     width:  80px;
@@ -177,7 +190,7 @@ image has to be small enough! I used 32px here*/
     padding: 15px 0 0 10px;
 }
 
-.musicOn {
+.musicOn  {
     padding: 0px;
     background-color: black;
     height: 25px;
@@ -188,14 +201,46 @@ image has to be small enough! I used 32px here*/
 .musicOn img {
     height:100%;
     width:100%;
+    cursor: pointer;
 }
 
 .musicContainer {
     display:flex;
     align-items: center;
-
 }
 
 .creator {
     display:flex;
+}
+
+.instruction {
+    margin-right: 5px;
+}
+
+.instruction-board{
+    text-align: center;
+    align-items: center;
+}
+
+.go-back{
+    background-color: black;
+    cursor: pointer;
+}
+.go-back img {
+    width:100%;
+    padding: 0px;
+    background-color: black;
+    height: 100%;
+}
+
+.instruction{
+    background-color: black;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.instruction img {
+    width:100%;
+    padding: 0px;
+    background-color: black;
+    height: 20px;
 }
