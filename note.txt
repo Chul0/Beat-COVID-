@@ -37,17 +37,3 @@ and give it a property point = 1
 -add effect  spray when viruses are clicked 
 -add sound effect when viruses are clicked 
 
-
-
-virus icon 
-https://pngtree.com/user/my-downloads
-https://illlustrations.co/
-
-background img
-https://www.pngfind.com/mpng/Jihxxw_n64-953-kb-transparent-crt-screen-overlay-hd/
-
-sanitizer
-https://pixabay.com/vectors/hand-sanitizer-sanitizer-5300802/
-
-music on 
-https://thenounproject.com/term/play-pause/159149/
