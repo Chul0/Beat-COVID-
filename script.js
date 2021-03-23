@@ -18,8 +18,6 @@ const winningCondition = 100 ;
 
 let timeRemaining =START_TIMER;
 let score = 0 ; //score has to be changed so value is 0
-let tickId = null; //same goes for tick and mole
-let virusID = null;
 
 class Virus {
     constructor(icon, points) {
@@ -31,6 +29,15 @@ let greenVirus = new Virus('virus', 2)
 let redVirus = new Virus('virus2', 5)
 let rainbowVirus = new Virus('virus3', -4)
 
+/*REFERENCE:
+[https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes#strict_mode]
+-Classes are "special functions", and just as you can define function expressions and function declarations
+-To declare a class, you use the class keyword with the name of the `class`.
+-A JavaScript class is not an object, It is a template for JavaScript objects.
+-The constructor method is a special method for creating and initializing an object created with a class. There can only be one special method with the name "constructor" in a class.
+*/
+
+
 document.querySelector('.time-number').innerText=timeRemaining;
 document.querySelector('.score-number').innerText=score;
 document.querySelector('.winning-message').innerText=winningMessage
@@ -40,6 +47,7 @@ document.querySelector('.start-button').addEventListener('click', (event) => {
     document.querySelector('.game-board').classList.add('hidden');
     document.querySelector('.game-board2').classList.remove('hidden');
     document.querySelector('.game-board3').classList.add('hidden');
+    backgroundMusic.play();
    //  console.log('you cliked');
    const addVirus = (num, type) => {
        if (type === greenVirus) {
@@ -100,6 +108,8 @@ document.querySelector('.start-button').addEventListener('click', (event) => {
         
 })    
 
+
+
 //for/of - loops through the values of an iterable object
 for (hole of document.querySelectorAll('.hole')) {
     hole.addEventListener('click', (event) => {
@@ -107,23 +117,28 @@ for (hole of document.querySelectorAll('.hole')) {
             event.target.classList.remove('virus')
             score += 2;
             document.querySelector('.score-number').innerText=score
+            clickingVirus.play();
         } else if (event.target.classList.contains('virus2')){
             event.target.classList.remove('virus2')
             score += 5;
             document.querySelector('.score-number').innerText=score
+            clickingVirus2.play();
         } else if (event.target.classList.contains('virus3')){
             event.target.classList.remove('virus3')
             score -= 4;
             document.querySelector('.score-number').innerText=score
+            losingScore.play();
         }
     })
 }
     let  resultValidation = () => {
         if (score >= winningCondition) {
             document.querySelector('.winning-message').innerHTML=winningMessage;
+            winSound.play();
             return;
         }else {
             document.querySelector('.winning-message').innerHTML=losingMessage;
+            lostSound.play();
             return;
         }
     }
@@ -137,4 +152,34 @@ document.querySelector('.restart-button').addEventListener('click', () => {
     
 
 
+
+//SOUNDS
+let backgroundMusic = new Audio ("./SoundEffect/background.mp3")
+backgroundMusic.volume = 0.3;
+let startRestart = new Audio("./SoundEffect/buttonClick.wav")
+startRestart.volume = 0.7;
+let losingScore = new Audio("./SoundEffect/UhOh2.mp3")
+losingScore.volume = 0.7;
+let clickingVirus = new Audio("./SoundEffect/killingVirus.mp3")
+clickingVirus.volume = 0.7;
+let clickingVirus2 = new Audio("./SoundEffect/killingVirus2.mp3")
+clickingVirus.volume = 0.7;
+let lostSound = new Audio("./SoundEffect/losing.mp3")
+lostSound.volume = 0.7;
+let winSound = new Audio("./SoundEffect/youWin.mp3")
+winSound.volume = 0.7;
+
+
+const buttonHover = document.querySelectorAll('.button-hover')
+buttonHover.forEach(button => {
+    button.addEventListener('mouseover',  () => {
+        startRestart.play();
+        // console.log('button sound is working')
+    })
+})
+
+
+const musicButton = document.querySelector('.musicOn').addEventListener('click', () => {
+    backgroundMusic.pause();
+})
 
