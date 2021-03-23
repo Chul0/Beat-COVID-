@@ -55,3 +55,22 @@ timer starts running.
 - Virus dissappears when clicked?
 - Game ends after 30 seconds? 
 - Reset button refreshes the game?
+
+
+## Credit
+
+Virus icon
+https://pngtree.com/user/my-downloads
+https://illlustrations.co/
+
+Background image
+https://www.pngfind.com/mpng/Jihxxw_n64-953-kb-transparent-crt-screen-overlay-hd/
+
+Sanitizer icon
+https://pixabay.com/vectors/hand-sanitizer-sanitizer-5300802/
+
+Music icon
+https://thenounproject.com/term/play-pause/159149/
+
+Sound/Music
+https://www.zapsplat.com/
