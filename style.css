@@ -1,25 +1,30 @@
 /* * {
-    border: 1px solid black;
+    border: 1px solid white;
 } */
 
 body {
     background-color:gray;
     background-image: url("./Wireframe/Screen.png");
-    background-position: center;
-    background-size: 1100px 700px;
+    background-position:center;
+    background-size: 1000px 500px;
     background-repeat: no-repeat;
+    background-position-y: 50px;
 }
 
+h2 {
+    margin-top: 50px;
+}
 
 .game-board {
     /* border: 5px solid black; */
-    width: 700px;
-    height: 500px;
-    margin:auto auto 50px auto;
+    width: 630px;
+    height: 420px;
+    margin: 60px auto 50px auto;
     display: flex;
     background-image: url("./Wireframe/people.png");
     background-repeat: no-repeat;
-    background-size: 700px 500px;
+    background-size: 600px 300px;
+    background-position: 30px 70px;
     
 }
 
@@ -37,15 +42,16 @@ body {
 
 .game-board2 {
     /* border: 5px solid black; */
-    width: 700px;
-    height: 500px;
-    margin:auto auto 50px auto;
+    width: 630px;
+    height: 420px;
+    margin: 60px auto 50px auto;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     background-image: url("./Wireframe/people.png");
     background-repeat: no-repeat;
-    background-size: 700px 500px;
+    background-size: 600px 300px;
+    background-position: 30px 70px;
     cursor:url('./Wireframe/hand-sanitizer.png'), auto;
 }
 /* [reference] https://stackoverflow.com/questions/6623769/css-custom-cursor-doesnt-work-in-ff-chrome 
@@ -53,29 +59,31 @@ image has to be small enough! I used 32px here*/
 
 .game-board3 {
     /* border: 5px solid black; */
-    width: 700px;
-    height: 500px;
-    margin:auto auto 50px auto;
+    width: 630px;
+    height: 420px;
+    margin: 60px auto 50px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-image: url("./Wireframe/people.png");
     background-repeat: no-repeat;
-    background-size: 700px 500px;
+    background-size: 600px 300px;
+    background-position: 30px 70px;
     cursor:url('./Wireframe/hand-sanitizer.png'), auto;
 }
 
 .instruction-board {
     /* border: 5px solid black; */
-    width: 700px;
-    height: 500px;
-    margin:auto auto 50px auto;
+    width: 630px;
+    height: 420px;
+    margin: 60px auto 50px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     background-image: url("./Wireframe/people.png");
     background-repeat: no-repeat;
-    background-size: 700px 500px;
+    background-size: 600px 300px;
+    background-position: 30px 70px;
     cursor:url('./Wireframe/hand-sanitizer.png'), auto;
 }
 
@@ -110,7 +118,7 @@ image has to be small enough! I used 32px here*/
 @keyframes fall{
     from {
         opacity: 1;
-        transform: translateY(-440px);
+        transform: translateY(-340px);
 }
     to {
         opacity: 1;
@@ -125,13 +133,15 @@ image has to be small enough! I used 32px here*/
     align-items: center;
     font-size: x-large;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    height: 10px;
 }
 
 .timer-container2 {
     /* border: 1px solid black; */
     display: flex;
     width: 1000px;
-    margin-top: 30px;
+    height: 10px;
+    margin-top: 10px;
     align-items: center;
 }
 
@@ -139,21 +149,21 @@ image has to be small enough! I used 32px here*/
     width: 10%;
     height: 50px;
     text-align: center;
-    margin: 150px 50px 0 150px;
+    margin: 220px 50px 0 220px;
 }
 .title {
     width: 250px;
     height: 50px;
     text-align: center;
     font-size: xx-large;
-    margin: 115px 50px 0 50px;
+    margin: 200px 50px 0 50px;
 }
 
 .score {
     width: 10%;
     height: 50px;
     text-align: center;
-    margin:150px 50px 0 80px;
+    margin:220px 220px 0 80px;
     font-size: x-large;
 }
 
@@ -187,15 +197,15 @@ image has to be small enough! I used 32px here*/
     width: 1100px;
     display: flex;
     align-items: center;
-    padding-top: 50px;
-    margin: auto;
+    padding-top: 0;
+    margin: 10px auto auto auto;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     justify-content: space-between;
 }
 
 
 .SNS {
-    padding: 15px 0 0 10px;
+    padding: 2px 0 0 10px;
 }
 
 .musicOn  {
@@ -210,11 +220,14 @@ image has to be small enough! I used 32px here*/
     height:100%;
     width:100%;
     cursor: pointer;
+    
 }
 
 .musicContainer {
     display:flex;
     align-items: center;
+    height:50px;
+    margin-right: 50px;
 }
 
 .creator {
@@ -251,4 +264,9 @@ image has to be small enough! I used 32px here*/
     padding: 0px;
     background-color: black;
     height: 20px;
+}
+
+#credit {
+    margin-top: 5px;
+    padding-left: 50px;
 }
